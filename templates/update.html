@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('update', pro_id = result.pro_id) }}" method="POST">
+	  		
+	</div>
+	
+		
+				 <h2>Update Product</h2>
+      <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="name" value="{{result.name}}"> 
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input type="text" class="form-control" name="description" id="description" value="{{result.description}}" >
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" class="form-control" name="price" id="price" value="{{result.price}}">
+            </div>
+
+       
+
+          	  			<div class="form-group">
+	  				<label for="image">Image</label>
+	    			<input type="file" class="form-control-file" name="image" accept="image/">
+	  			</div>
+	  			<button type="submit" class="btn btn-primary">Update</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}
